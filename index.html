@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merhaba Ben Mutlu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting">Merhaba Ben Mutlu</h1>
+    <script>
+        window.onload = function() {
+            const greeting = document.getElementById("greeting");
+            setTimeout(() => {
+                greeting.style.opacity = "1";
+                greeting.style.transform = "translateY(0)";
+            }, 500);
+        };
+    </script>
+</body>
+</html>
